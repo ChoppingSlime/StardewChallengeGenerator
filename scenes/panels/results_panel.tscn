@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://tw08w7cdgt72"]
+
+[ext_resource type="Script" uid="uid://bfkw5gmbq8its" path="res://scenes/panels/results_panel.gd" id="1_gdq2b"]
+
+[node name="ResultsPanel" type="Panel"]
+script = ExtResource("1_gdq2b")

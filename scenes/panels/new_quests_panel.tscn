@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cclnrw2avuk2j"]
+
+[ext_resource type="Script" uid="uid://bsdltcwa5r03q" path="res://scenes/panels/new_quests_panel.gd" id="1_fod8h"]
+
+[node name="NewQuestsPanel" type="Panel"]
+script = ExtResource("1_fod8h")

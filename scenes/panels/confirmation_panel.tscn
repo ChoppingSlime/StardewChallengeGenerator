@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c63ldddl6e8wm"]
+
+[ext_resource type="Script" uid="uid://cloiad3k8vmji" path="res://scenes/panels/confirmation_panel.gd" id="1_h3ypa"]
+
+[node name="ConfirmationPanel" type="Panel"]
+script = ExtResource("1_h3ypa")
