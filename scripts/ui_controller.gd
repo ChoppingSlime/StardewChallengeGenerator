@@ -2,9 +2,9 @@
 extends Control
 
 # Scene references
-@onready var season_year_display = $HeaderSection/SeasonYearDisplay
-@onready var score_display = $HeaderSection/ScoreDisplay
-@onready var malus_list = $MalusSection/MalusList
+@onready var season_year_display : Label
+@onready var score_display : Label
+@onready var malus_list : VBoxContainer
 @onready var seasonal_quest_display = $QuestSection/SeasonalQuestDisplay
 @onready var yearly_quest_display = $QuestSection/YearlyQuestDisplay
 @onready var rewards_list = $RewardsSection/RewardsList

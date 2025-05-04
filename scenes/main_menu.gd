@@ -1,10 +1,10 @@
 # main_menu.gd
 extends Control
 
-@onready var new_challenge_button = $VBoxContainer/NewChallengeButton
-@onready var load_challenge_button = $VBoxContainer/LoadChallengeButton
-@onready var exit_button = $VBoxContainer/ExitButton
-@onready var title_label = $TitleLabel
+@export var new_challenge_button : Button
+@export var load_challenge_button : Button
+@export var exit_button : Button
+@export var title_label : Label
 
 func _ready():
 	# Connect button signals

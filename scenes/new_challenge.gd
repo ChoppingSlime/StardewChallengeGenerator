@@ -3,14 +3,14 @@ extends Control
 
 signal challenge_created
 
-@onready var challenge_name_edit = $SetupPanel/VBoxContainer/NameSection/NameEdit
-@onready var year_spinner = $SetupPanel/VBoxContainer/YearSection/YearSpinner
-@onready var season_option = $SetupPanel/VBoxContainer/SeasonSection/SeasonOption
-@onready var coop_check = $SetupPanel/VBoxContainer/SettingsSection/CoopCheck
-@onready var bus_check = $SetupPanel/VBoxContainer/SettingsSection/BusCheck
-@onready var ginger_check = $SetupPanel/VBoxContainer/SettingsSection/GingerCheck
-@onready var create_button = $SetupPanel/VBoxContainer/ButtonSection/CreateButton
-@onready var back_button = $SetupPanel/VBoxContainer/ButtonSection/BackButton
+@export var challenge_name_edit : LineEdit
+@export var year_spinner : LineEdit
+@export var season_option : OptionButton
+@export var coop_check : CheckBox
+@export var bus_check : CheckBox
+@export var ginger_check : CheckBox
+@export var create_button : Button
+@export var back_button : Button
 
 # Season options
 var seasons = ["Spring", "Summer", "Fall", "Winter"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://br16unexk1h5d" path="res://scenes/new_challenge.gd" id="1_1id5p"]
 
-[node name="NewChallenge" type="Control"]
+[node name="NewChallenge" type="Control" node_paths=PackedStringArray("challenge_name_edit", "year_spinner", "season_option", "coop_check", "bus_check", "ginger_check", "create_button", "back_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,3 +10,159 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1id5p")
+challenge_name_edit = NodePath("PanelContainer/MarginContainer/VBoxContainer/NameSection/HBoxContainer/NameEdit")
+year_spinner = NodePath("PanelContainer/MarginContainer/VBoxContainer/YearSection/HBoxContainer/YearSpinner")
+season_option = NodePath("PanelContainer/MarginContainer/VBoxContainer/SeasonSection/HBoxContainer/SeasonOption")
+coop_check = NodePath("PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer/HBoxContainer/CoopCheck")
+bus_check = NodePath("PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer/HBoxContainer3/BusCheck")
+ginger_check = NodePath("PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer/HBoxContainer2/GingerCheck")
+create_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/ButtonSection/VBoxContainer/CreateButton")
+back_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/ButtonSection/VBoxContainer/BackButton")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = -192.5
+offset_right = 194.0
+offset_bottom = 192.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="NameSection" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/NameSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/NameSection/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "New save name:"
+
+[node name="NameEdit" type="LineEdit" parent="PanelContainer/MarginContainer/VBoxContainer/NameSection/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "New save"
+placeholder_text = "New save"
+max_length = 30
+expand_to_text_length = true
+clear_button_enabled = true
+
+[node name="YearSection" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/YearSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/YearSection/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Starting year:"
+
+[node name="YearSpinner" type="LineEdit" parent="PanelContainer/MarginContainer/VBoxContainer/YearSection/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1"
+
+[node name="SeasonSection" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/SeasonSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/SeasonSection/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Starting season:"
+
+[node name="SeasonOption" type="OptionButton" parent="PanelContainer/MarginContainer/VBoxContainer/SeasonSection/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+selected = 0
+item_count = 4
+popup/item_0/text = "Spring"
+popup/item_0/id = 0
+popup/item_1/text = "Summer"
+popup/item_1/id = 1
+popup/item_2/text = "Fall"
+popup/item_2/id = 2
+popup/item_3/text = "Winter"
+popup/item_3/id = 3
+
+[node name="SettingsSection" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/SettingsSection"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Is coop enabled:"
+
+[node name="CoopCheck" type="CheckBox" parent="PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Is bus unlocked:"
+
+[node name="BusCheck" type="CheckBox" parent="PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Is island unlocked:"
+
+[node name="GingerCheck" type="CheckBox" parent="PanelContainer/MarginContainer/VBoxContainer/SettingsSection/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="ButtonSection" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonSection"]
+layout_mode = 2
+
+[node name="CreateButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonSection/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Create challenge"
+
+[node name="BackButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonSection/VBoxContainer"]
+layout_mode = 2
+text = "Go back"

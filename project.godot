@@ -10,9 +10,18 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="StardewChallengeGenerator"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://scripts/game_manager.gd"
+
+[gui]
+
+theme/custom="uid://cfani4v4d332y"
+theme/custom_font="uid://ckfdnxxdywybc"
 
 [rendering]
 

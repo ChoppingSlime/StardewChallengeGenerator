@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cfani4v4d332y"]
+
+[ext_resource type="FontFile" uid="uid://ckfdnxxdywybc" path="res://scenes/Stardew_Valley.ttf" id="1_lcwsu"]
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_lcwsu")
+Label/font_sizes/font_size = 32
+LineEdit/font_sizes/font_size = 32
